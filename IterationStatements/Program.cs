@@ -102,28 +102,23 @@ namespace IterationStatements
         }
         //Heatin Up Section:
         //Write a method to check if an integer(from the user) is in the range -10 to 10
-        public static bool IsNumberInRange(int number)
+        public static void IsNumberInRange()
         {
            Console.WriteLine("--------------------------------------------------------------");
            Console.WriteLine("How did you score on your game?");
 
-           if (number >= -10 && number <= 10)
+            bool value = true;
+            var num = int.Parse(Console.ReadLine());
+
+           if (num >= -10 && num <= 10)
            {
-              return true;
+                Console.WriteLine("Welcome to our league!"); 
            }
            else
            {
-              return false;
+                Console.WriteLine("Your score doesn't cut it!");
            }
-           { 
-            int num1 = 5;
-            bool isInRange = IsNumberInRange(num1);
-            Console.WriteLine(isInRange);  // Output: True
-
-            int num2 = 15;
-            isInRange = IsNumberInRange(num2);
-            Console.WriteLine(isInRange);  // Output: False
-           }
+           
             Console.WriteLine("______________________________________________________________");
 
         }
@@ -155,7 +150,7 @@ namespace IterationStatements
             EvenOdd();
             PositiveNum();
             Voter();
-            IsNumberInRange(10);
+            IsNumberInRange();
             Table();
         }
     }
